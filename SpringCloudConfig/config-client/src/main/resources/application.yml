@@ -28,7 +28,7 @@ management:
         include: bus-refresh
 
 server:
-  port: 8882
+  port: 8881
 
 eureka:
   client:
