@@ -3,7 +3,7 @@ spring:
     name: config-client
   cloud:
     config:
-      label: master
+      label: main
       profile: dev
       uri: http://localhost:8888/
       discovery:
@@ -28,7 +28,7 @@ management:
         include: bus-refresh
 
 server:
-  port: 8881
+  port: 8882
 
 eureka:
   client:

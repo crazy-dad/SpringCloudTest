@@ -6,6 +6,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * web读取配置的方式：
+ *  /{application}/{profile}[/{label}]
  * 	/{application}-{profile}.yml
  * 	/{label}/{application}-{profile}.yml
  * 	/{application}-{profile}.properties
