@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-//动态配置刷新
+/**
+ * 动态配置刷新
+ * http://localhost:8881/actuator/bus-refresh
+ * 要用post，并在header增加Content-Type为application/json
+ */
 @RefreshScope
 public class ConfigClientApplication {
 
