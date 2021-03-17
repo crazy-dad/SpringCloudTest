@@ -35,4 +35,38 @@ public class Application {
     public Mono<String> fallback() {
         return Mono.just("fallback");
     }*/
+
+//    /**
+//     * Filters Test
+//     * @param builder
+//     * @return
+//     */
+//    @Bean
+//    public RouteLocator customerRouteLocator(RouteLocatorBuilder builder) {
+//        String url = "http://httpbin.org:80";
+//        return builder.routes()
+//                .route(p -> p.path("/customer/**")
+//                        .filters(f -> f.filter(new RequestTimeFilter())
+//                                .addRequestHeader("X-Response-Default-Foo", "Default-Bar"))
+//                        .uri(url)
+//                        .order(0)
+//                        .id("customer_filter_router"))
+//                .build();
+//    }
+
+    /**
+     * Filters Test
+     */
+    /*@Bean
+    public RequestTimeGatewayFilterFactory getRequestTimeFactory() {
+        return new RequestTimeGatewayFilterFactory();
+    }*/
+
+    /**
+     * GlobalFilter Test
+     */
+    @Bean
+    public TokenFilter tokenFilter(){
+        return new TokenFilter();
+    }
 }
